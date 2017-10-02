@@ -21,7 +21,7 @@ task detekt(type: JavaExec) {
 
     main = "io.gitlab.arturbosch.detekt.cli.Main"
     classpath = configurations.detekt
-    def input = "$projectDir"
+    def input = "$projectDir/../"
     def config = conf
     def output = "$projectDir/build/reports/detekt/"
     def filters = "(?i).*src/.*test/.*"
