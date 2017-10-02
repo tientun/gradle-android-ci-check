@@ -1,5 +1,5 @@
 
-def GIT_USER = 'monstar-lab'
+def GIT_USER = 'tientun'
 def CI_VERSION = 'master'
 
 if (!project.hasProperty('gitUser')) {
