@@ -13,7 +13,7 @@ task checkstyle(type: Checkstyle) {
         conf = file(checkStyleConfigFile)
     } else {
         conf = File.createTempFile("checkstyle", "")
-        new URL("https://raw.githubusercontent.com/$GIT_USER/gradle-android-ci-check/$CI_VERSION/config/checkstyle/checkstyle.xml")
+        new URL("https://raw.githubusercontent.com/$gitUser/gradle-android-ci-check/$ciVersion/config/checkstyle/checkstyle.xml")
                 .withInputStream{ i -> conf.withOutputStream{ it << i }}
     }
     configFile conf
@@ -35,7 +35,7 @@ task findbugs(type: FindBugs, dependsOn: "assembleDebug") {
         conf = file(findBugsExcludeFilter)
     } else {
         conf = File.createTempFile("findbugs", "")
-        new URL("https://raw.githubusercontent.com/$GIT_USER/gradle-android-ci-check/$CI_VERSION/config/findbugs/findbugs-filter.xml")
+        new URL("https://raw.githubusercontent.com/$gitUser/gradle-android-ci-check/$ciVersion/config/findbugs/findbugs-filter.xml")
                 .withInputStream{ i -> conf.withOutputStream{ it << i }}
     }
     excludeFilter = conf
@@ -63,7 +63,7 @@ task pmd(type: Pmd) {
         conf = file(pmdRuleSetFiles)
     } else {
         conf = File.createTempFile("pmd", "")
-        new URL("https://raw.githubusercontent.com/$GIT_USER/gradle-android-ci-check/$CI_VERSION/config/pmd/pmd-ruleset.xml")
+        new URL("https://raw.githubusercontent.com/$gitUser/gradle-android-ci-check/$ciVersion/config/pmd/pmd-ruleset.xml")
                 .withInputStream{ i -> conf.withOutputStream{ it << i }}
     }
     ruleSetFiles = files(conf)

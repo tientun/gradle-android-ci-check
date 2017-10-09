@@ -16,7 +16,7 @@ complexity:
 style:
   active: true
   WildcardImport:
-    active: true
+    active: false
   ModifierOrder:
     active: true
   PackageNaming:
@@ -55,6 +55,8 @@ style:
     excludePackageStatements: false
     excludeImportStatements: false
   UnnecessaryParentheses:
+    active: false
+  ForbiddenComment:
     active: false
 
 comments:
