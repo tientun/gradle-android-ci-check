@@ -51,7 +51,7 @@ style:
     minimumVariableNameLength: 3
   MaxLineLength:
     active: true
-    maxLineLength: 120
+    maxLineLength: 150
     excludePackageStatements: false
     excludeImportStatements: false
   UnnecessaryParentheses:
@@ -62,13 +62,15 @@ style:
 comments:
   active: true
   CommentOverPrivateMethod:
-    active: true
+    active: false
   CommentOverPrivateProperty:
-    active: true
+    active: false
   NoDocOverPublicClass:
     active: true
   NoDocOverPublicMethod:
-    active: true
+    active: false
+  UndocumentedPublicFunction:
+    active: false
 
 potential-bugs:
   active: true
